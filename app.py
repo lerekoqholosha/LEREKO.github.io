@@ -9,7 +9,7 @@ today = date.today()
 
 d1 = today.strftime("%Y/%m/%d")
 end_date = d1
-d2 = date.today() - timedelta(days=365)
+d2 = date.today() - timedelta(days=30)
 d2 = d2.strftime("%Y/%m/%d")
 start_date = d2
 import streamlit as st
