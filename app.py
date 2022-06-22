@@ -23,7 +23,7 @@ try:
   
   data = web.DataReader(name=a, data_source='yahoo', start=start_date, end=end_date)
 except RemoteDataError:
-  pass
+   print("Something else went wrong")
 fig, ax = plt.subplots() 
 ax = data["Close"].plot(figsize=(12, 8), title=a+" Stock Prices", fontsize=20, label="Close Price")
 plt.legend()
