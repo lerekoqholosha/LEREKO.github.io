@@ -3,9 +3,10 @@ import yfinance as yf
 import pandas_datareader.data as web
 import matplotlib.pyplot as plt
 import datetime
+from pandas_datareader._utils import RemoteDataError
 from datetime import date, timedelta
 
-yf.web_override()
+
 
 today = date.today()
 #'%d-%m-%Y'
