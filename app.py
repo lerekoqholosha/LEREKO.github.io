@@ -19,7 +19,11 @@ start_date = d2
 import streamlit as st
 st.title("Real-time Stock Price Data")
 a = st.text_input("Enter Company Name:)")
-data = web.DataReader(name=a, data_source='yahoo', start=start_date, end=end_date)
+try:
+  
+  data = web.DataReader(name=a, data_source='yahoo', start=start_date, end=end_date)
+except RemoteDataError:
+  pass
 fig, ax = plt.subplots() 
 ax = data["Close"].plot(figsize=(12, 8), title=a+" Stock Prices", fontsize=20, label="Close Price")
 plt.legend()
