@@ -3,3 +3,4 @@ pandas
 matplotlib
 datetime
 pandas_datareader
+yfinance
